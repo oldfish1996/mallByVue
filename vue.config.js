@@ -4,9 +4,7 @@ const resolve = dir => path.join(__dirname, dir);
 
 module.exports = {
   //部署到 github 设置路径
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/mallByVue/'
-    : '/',
+  publicPath: "./",
   //设置文件夹别名
   chainWebpack: config => {
     // 设置快捷路径， @ 表示 'src' ，components 表示 'src/components'

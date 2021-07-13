@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="main-tab-bar">
     <tab-bar>
       <tab-bar-item path="/home">
         <template #item-icon>
@@ -63,4 +63,10 @@ export default {
 
 <style>
 @import url("~@/assets/css/base.css");
+#main-tab-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 </style>
