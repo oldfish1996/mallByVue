@@ -7,12 +7,15 @@
     </nav-bar>
     <!-- 轮播图 -->
     <home-swiper :banner="banner"></home-swiper>
+    <!-- 推荐栏 -->
+    <home-recommand :recommend="recommend"></home-recommand>
   </div>
 </template>
 
 <script>
 import NavBar from 'components/common/navbar/NavBar.vue';
 import HomeSwiper from './childrenComponents/HomeSwiper.vue';
+import HomeRecommand from "./childrenComponents/HomeRecommand.vue"
 
 import {getHomeData} from 'network/home.js';
 
@@ -20,7 +23,8 @@ export default {
   name: "Home",
   components: { 
     NavBar,
-    HomeSwiper
+    HomeSwiper,
+    HomeRecommand
   },
   data() {
     return {
@@ -33,7 +37,7 @@ export default {
       console.log("homeData--->",res);
       //console.log(this);
       this.banner = res.data.banner.list;
-      this.recommand = res.data.recommend.list;
+      this.recommend = res.data.recommend.list;
     });
   },
 }
